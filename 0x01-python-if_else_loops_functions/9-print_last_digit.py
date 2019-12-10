@@ -1,4 +1,4 @@
-#!/bin/nash/python3
+#!/bin/bash/python3
 def print_last_digit(number):
     if number > 0:
         number %= 10
