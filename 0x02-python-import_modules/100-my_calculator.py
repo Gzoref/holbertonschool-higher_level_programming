@@ -18,7 +18,7 @@ if __name__ == "__main__":
         elif operator == '*':
             print('{} * {} = {}'.format(a, b, mul(a, b)))
         elif operator == '/':
-            print('{} / {} = {}'.format(a, div(a, b)))
+            print('{} / {} = {}'.format(a, b, div(a, b)))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
