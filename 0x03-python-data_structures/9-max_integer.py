@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
-    if len(my_list) == 0:
+    largest = my_list[0]
+    if not my_list or len(my_list) == 0:
         return None
-    largest = my_list.copy()
-    largest.sort()
-    return largest[-1]
+    for num in my_list:
+        if largest < num:
+            largest = num
+    return largest
