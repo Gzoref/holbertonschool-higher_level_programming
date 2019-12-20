@@ -1,4 +1,4 @@
-#!/usr/bin/pythpn3
+#!/usr/bin/python3
 def weight_average(my_list=[]):
     weight = 0
     product = []
