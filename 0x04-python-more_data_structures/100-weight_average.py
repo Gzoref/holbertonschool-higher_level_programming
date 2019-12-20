@@ -2,6 +2,8 @@
 def weight_average(my_list=[]):
     weight = 0
     product = []
+    if my_list is []:
+        return 0
     for i in my_list:
         weight += i[1]
         product.append(i[0] * i[1])
