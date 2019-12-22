@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <Python.h>
 #include <object.h>
 #include <listobject.h>
@@ -23,7 +21,7 @@ void print_python_list_info(PyObject *p)
 
 	for (count = 0; count < length; count++)
 	{
-		printf("Element %d: %s\n", count, Py_TYPE(pObj->ob_item[count])->tp_name);
+		printf("Element %ld: %s\n", count, Py_TYPE(pObj->ob_item[count])->tp_name);
 	}
 
 }
