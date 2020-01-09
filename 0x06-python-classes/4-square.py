@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""Access and update private attribute"""
+
+
 class Square:
     """Private instance attribute: size
     Instantiation with area method """
