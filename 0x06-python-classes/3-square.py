@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""Area of a square"""
+
+
 class Square:
     """Private instance attribute: size
     Instantiation with area method """
