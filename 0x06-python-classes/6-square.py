@@ -49,12 +49,12 @@ class Square:
         """Print method"""
         for i in range(self.__position[1]):
             print()
-        for j in range(0, self.__size):
+        for j in range(0, self.size):
                 print(' ', end="")
                 for n in range(self.__position[0]):
                     print(' ', end="")
                 for m in range(self.__size):
                         print('#', end="")
                 print()
-        if self.size == 0:
-            print('\n')
+        if self.__size is 0:
+            print()
