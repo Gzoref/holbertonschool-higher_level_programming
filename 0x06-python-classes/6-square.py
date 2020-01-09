@@ -8,8 +8,8 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Initializes attribute size """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """Calculate area of square"""
@@ -25,7 +25,7 @@ class Square:
         """Initializes attribute size """
         if (type(value) is not int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
@@ -38,9 +38,9 @@ class Square:
     @position.setter
     def position(self, value):
         """Initializes attribute position"""
-        if (value[1][0] is not int or value[0] < 0):
+        if (type(value[0]) is not int or value[0] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif (value[1][1] is not int or value[1] < 0):
+        if (type(value[1]) is not int or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
