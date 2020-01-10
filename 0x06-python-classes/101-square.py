@@ -55,7 +55,7 @@ class Square:
             return
         else:
             str = '\n' * self.__position[1]
-        for i in range(self.size):
+        for i in range(self.__size):
             str += ' ' * self.position[0]
             str += '#' * self.__size + '\n'
         return str[:-1]
