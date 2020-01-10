@@ -45,10 +45,17 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
+    def my_print(self):
+        """Print method"""
+        print(self.__str__())
+
     def __str__(self):
         """Print representation of squares"""
-        str = '\n' * self.__position[1]
+        if self.size == 0:
+            print()
+        else:
+            str = '\n' * self.__position[1]
         for i in range(self.size):
-            str += '_' * self.position[0]
+            str += ' ' * self.position[0]
             str += '#' * self.__size + '\n'
-        return str
+        return str[:-1]
