@@ -52,7 +52,7 @@ class Square:
     def __str__(self):
         """Print representation of squares"""
         if self.size == 0:
-            print()
+            return
         else:
             str = '\n' * self.__position[1]
         for i in range(self.size):
