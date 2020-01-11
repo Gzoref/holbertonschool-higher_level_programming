@@ -1,0 +1,9 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> print(say_my_name("John", "Smith"))
+John Smith
+>>> print(say_my_name("Walter", "White"))
+Walter White
+>>> print(say_my_name("Walter", "White"))
+Walter White
+>>> print(say_my_name("Bob"))
+Bob
