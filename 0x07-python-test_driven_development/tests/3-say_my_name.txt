@@ -1,6 +1,8 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
+
 >>> say_my_name("Geoffrey", "Zoref")
 My name is Geoffrey Zoref
+
 >>> say_my_name("Holberton", 4)
 Traceback (most recent call last):
 TypeError: last_name must be a string
