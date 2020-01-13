@@ -38,3 +38,11 @@ TypeError: last_name must be a string
 >>> say_my_name("Holberton", 1)
 Traceback (most recent call last):
 TypeError: last_name must be a string
+
+>>> say_my_name(None, "Zoref")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name([1, 2, 3], "Zoref")
+Traceback (most recent call last):
+TypeError: first_name must be a string
