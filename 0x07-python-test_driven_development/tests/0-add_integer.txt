@@ -12,8 +12,14 @@
 >>> add_integer(100.3, -2)
 98
 
+>>> add_integer(10, 3.7)
+13
+
 >>> add_integer(69, 42)
 111
+
+>>> add_integer(9223372036854775807, 1)
+9223372036854775808
 
 >>> add_integer('hello', 43)
 Traceback (most recent call last):
@@ -26,6 +32,31 @@ Traceback (most recent call last):
 TypeError: b must be an integer
 
 >>> add_integer(None, 'holberton')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer('Geoffrey', 'Zoref')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(23, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(23, [1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer([3, 4, 5])
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer([])
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
