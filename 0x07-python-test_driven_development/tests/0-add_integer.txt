@@ -36,7 +36,7 @@ Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
->>> add_integer('Geoffrey', 'Zoref')
+>>> add_integer('12a', 'Zoref')
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
