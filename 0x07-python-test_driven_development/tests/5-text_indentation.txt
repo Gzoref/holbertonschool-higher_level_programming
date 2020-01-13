@@ -1,3 +1,7 @@
+===================================================
+Tests for text_indentation in 5-text_indentation.py
+===================================================
+
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
@@ -49,6 +53,14 @@ TypeError: text must be a string
 Geoffrey Zoref
 
 >>> text_indentation("")
+
+>>> text_indentation('   .?:      ')
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
 
 >>> text_indentation([2, 3, 4])
 Traceback (most recent call last):
