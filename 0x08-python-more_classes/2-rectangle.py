@@ -6,7 +6,7 @@ Write a class Rectangle that defines a rectangle by: (based on 1-rectangle.py)
 
 class Rectangle:
     """
-    A class Square that defines a square
+    A class Rectanle that defines a rectangle
     """
 
     def __init__(self, width=0, height=0):
@@ -62,4 +62,6 @@ class Rectangle:
         """
         Returns a rectangle's perimeter
         """
+        if self.width == 0 or self.height == 0:
+            return 0
         return (self.width + self.height) * 2
