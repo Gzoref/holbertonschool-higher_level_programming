@@ -5,5 +5,22 @@ Tests for matrix multiplication  in 100-matrix_mul.py
 >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 
 
->>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
-[[ 7 10] [15 22]]
+>>> lazy_matrix_mul(1, 2)
+Traceback (most recent call last):
+TypeError: m_a must be a list
+
+>>> lazy_matrix_mul([], 43)
+Traceback (most recent call last):
+TypeError: m_b must be a list
+
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [['a', 2], [13, 4]])
+Traceback (most recent call last):
+TypeError: m_b should contain only integers or floats
+
+>>> lazy_matrix_mul([[1, 2, 3], [4, 5], [6, 7, 8]], [[1]])
+Traceback (most recent call last):
+TypeError: each row of m_a must should be of the same size
+
+>> lazy_matrix_mul([[1, 2, 3], [4, 5, 6]], [[1, 2], [3, 4, 5], [6, 7, 8]])
+Traceback (most recent call last):
+TypeError: each row of m_b must should be of the same size
