@@ -22,6 +22,14 @@ Tests for text_indentation in 0-add_integer.py
 >>> add_integer(69, 42)
 111
 
+>> add_integer(inf)
+inf
+
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
 >>> add_integer(9223372036854775807, 1)
 9223372036854775808
 
