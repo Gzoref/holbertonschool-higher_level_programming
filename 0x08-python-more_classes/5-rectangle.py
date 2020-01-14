@@ -67,13 +67,22 @@ class Rectangle:
         return (self.width + self.height) * 2
 
     def __str__(self):
+        """
+        String representation
+        """
         string = ""
         for i in range(self.height):
             string += '#' * self.width + '\n'
         return string[:-1]
 
     def __repr__(self):
+        """
+        Representation
+        """
         return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
+        """
+        Delete
+        """
         print('Bye rectangle...')
