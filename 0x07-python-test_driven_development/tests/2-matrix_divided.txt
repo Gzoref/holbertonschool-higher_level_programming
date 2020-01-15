@@ -1,5 +1,5 @@
 ===================================================
-Tests for text_indentation in 2-matrix_divided.py
+Tests for matrix_divided in 2-matrix_divided.py
 ===================================================
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
@@ -35,3 +35,12 @@ TypeError: Each row of the matrix must have the same size
 >>> matrix_divided((1, 2), 2)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[2,3],[3, 4]])
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided([[3, "a"], [12, 3]], 3)
+Traceback (most recent call last):
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
