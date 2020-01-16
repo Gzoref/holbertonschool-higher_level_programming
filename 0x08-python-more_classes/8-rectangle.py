@@ -59,13 +59,13 @@ class Rectangle:
         """
         Returns a rectangle's area
         """
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
         """
         Returns a rectangle's perimeter
         """
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         return (self.width + self.height) * 2
 
@@ -82,7 +82,7 @@ class Rectangle:
         """
         Representation
         """
-        return "Rectangle({}, {})".format(self.width, self.height)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         """
@@ -97,9 +97,9 @@ class Rectangle:
         Returns the biggest rectangle based on the area
         """
         if not isinstance(rect_1, Rectangle):
-            TypeError('rect_1 must be an instance of Rectangle')
+            raise TypeError('rect_1 must be an instance of Rectangle')
         if not isinstance(rect_2, Rectangle):
-            TypeError('rect_2 must be an instance of Rectangle')
+           raise TypeError('rect_2 must be an instance of Rectangle')
         if rect_1.area() == rect_2.area():
             return rect_1
         elif rect_1.area() > rect_2.area():
