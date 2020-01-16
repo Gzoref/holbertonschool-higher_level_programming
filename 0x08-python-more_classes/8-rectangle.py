@@ -50,9 +50,9 @@ class Rectangle:
         width setter
         """
         if not isinstance(value, int):
-            TypeError('width must be an integer')
+            TypeError('height must be an integer')
         if value < 0:
-            raise ValueError('width must be >= 0')
+            raise ValueError('height must be >= 0')
         self.__height = value
 
     def area(self):
@@ -100,9 +100,9 @@ class Rectangle:
             TypeError('rect_1 must be an instance of Rectangle')
         if not isinstance(rect_2, Rectangle):
             TypeError('rect_2 must be an instance of Rectangle')
-        if rect_1.area() > rect_2.area():
-            return rect_1
         if rect_1.area() == rect_2.area():
             return rect_1
-        else:
+        elif rect_1.area() > rect_2.area():
             return rect_1
+        else:
+            return rect_2
