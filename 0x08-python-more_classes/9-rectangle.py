@@ -50,9 +50,9 @@ class Rectangle:
         width setter
         """
         if not isinstance(value, int):
-            TypeError('width must be an integer')
+            TypeError('height must be an integer')
         if value < 0:
-            raise ValueError('width must be >= 0')
+            raise ValueError('height must be >= 0')
         self.__height = value
 
     def area(self):
@@ -74,6 +74,8 @@ class Rectangle:
         String representation method
         """
         string = ""
+        if self.width == 0 or self.height == 0:
+            return string
         for i in range(self.height):
             string += str(self.print_symbol) * self.width + '\n'
         return string[:-1]
@@ -99,10 +101,10 @@ class Rectangle:
             TypeError('rect_1 must be an instance of Rectangle')
         if not isinstance(rect_2, Rectangle):
             TypeError('rect_2 must be an instance of Rectangle')
-        if rect_1.area() > rect_2.area():
+        if (rect_1.area() >= rect_2.area()):
             return rect_1
-        if rect_1.area() == rect_2.area():
-            return rect1
+        else:
+            return rect_2
 
     @classmethod
     def square(cls, size=0):
