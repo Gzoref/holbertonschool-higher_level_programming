@@ -33,3 +33,8 @@ my_list = MyList()
 Traceback (most recent call last):
 ...
 TypeError: 'NoneType' object is not iterable
+
+>>> my_list.print_sorted([2, 3, 4, 5])
+Traceback (most recent call last):
+...
+TypeError: print_sorted() takes 1 positional argument but 2 were given
