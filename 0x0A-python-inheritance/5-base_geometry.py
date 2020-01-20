@@ -4,5 +4,5 @@ Write an empty class BaseGeometry.
 '''
 
 
-class BaseGeometry(object):
+class BaseGeometry:
     pass
