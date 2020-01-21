@@ -15,6 +15,4 @@ def save_to_json_file(my_obj, filename):
     if filename is None:
         return
     with open(filename, 'w', encoding='utf-8') as f:
-        json_var = json.dumps(my_obj)
-        f.write(json_var)
-        f.close()
+        json_var = json.dump(my_obj, f)
