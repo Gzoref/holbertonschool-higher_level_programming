@@ -10,4 +10,8 @@ def from_json_string(my_str):
     '''
     Return object as JSON
     '''
-    return json.loads(my_str)
+    try:
+        json_var = json.loads(my_str)
+    except ValueError:
+         raise ValueError('Expecting property name enclosed in double quotes:')
+    return json_var
