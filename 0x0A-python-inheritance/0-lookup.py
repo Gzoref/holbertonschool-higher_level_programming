@@ -8,4 +8,4 @@ def lookup(obj):
     '''
     Returns attributes available
     '''
-    return dir(object)
+    return dir(obj)
