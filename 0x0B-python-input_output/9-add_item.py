@@ -12,15 +12,13 @@ save them to a file
 
 
 argc = len(argv)
-
 filename = 'add_item.json'
-my_list = []
-count = 0
-with open(filename, 'r') as f:
+with open(filename, 'r', encoding='utf-8') as f:
+    count = 0
     for line in f:
         count += 1
-    f.close()
 if count > 0:
+    my_list = []
     my_list = load_from_json_file(filename)
 else:
     my_list = []
