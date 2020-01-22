@@ -11,11 +11,10 @@ class Rectangle(BaseGeometry):
     Class
     '''
 
-    Method inherits from BaseGeometry
-    '''
-    Method
-    '''
     def __init__(self, width, height):
+        '''
+        Method
+        '''
         self.integer_validator('width', width)
         self.__width = width
         self.integer_validator('height', height)
