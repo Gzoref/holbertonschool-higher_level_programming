@@ -21,7 +21,6 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-
     @property
     def width(self):
         '''
@@ -39,7 +38,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError('width must be > than 0')
         self.__width = value
-    
+
     @property
     def height(self):
         '''
@@ -57,7 +56,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError('height must be > than 0')
         self.__height = value
-        
+
     @property
     def x(self):
         '''
@@ -75,7 +74,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError('x must be > than 0')
         self.__x = value
-        
+
     @property
     def y(self):
         '''
@@ -93,21 +92,27 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError('y must be > than 0')
         self.__y = value
-        
-        
+
     def area(self):
         '''
         Returns area
         '''
         return self.width * self.height
-    
+
     def display(self):
         '''
-        Prints Rectangle to 
+        Prints Rectangle to
         console with #
         '''
-        for i in range(self.height):
-            print('# ' * self.width)
+        for col in range(self.x):
+                print()
+        for y_axis in range(self.height):
+            for x_axis in range(self.y):
+                 print(' ' , end='')
+            for row in range(self.width):
+                print('#', end='')
+            print()
+        
 
     def __str__(self):
         return f'[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}'
