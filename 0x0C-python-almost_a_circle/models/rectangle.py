@@ -115,5 +115,19 @@ class Rectangle(Base):
         
 
     def __str__(self):
-        return f'[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}'
+        return '[Rectangle] ({}) {}/{} - {}/{} '.format(self.id, self.x, self.y, self.width, self.height)
         
+    def update(self, *args, **kwargs):
+        '''
+        Allows for variadic args
+        '''
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
+        if args is None:
+            pass
