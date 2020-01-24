@@ -115,12 +115,16 @@ class Rectangle(Base):
         
 
     def __str__(self):
+        '''
+        String representation
+        '''
         return '[Rectangle] ({}) {}/{} - {}/{} '.format(self.id, self.x, self.y, self.width, self.height)
         
     def update(self, *args, **kwargs):
         '''
         Allows for variadic args
         '''
+        argc = len(args)
         try:
             self.id = args[0]
             self.width = args[1]
@@ -129,5 +133,5 @@ class Rectangle(Base):
             self.y = args[4]
         except IndexError:
             pass
-        if args is None:
-            pass
+        
+            
