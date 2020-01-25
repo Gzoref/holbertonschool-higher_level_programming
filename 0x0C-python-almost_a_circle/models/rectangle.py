@@ -113,19 +113,12 @@ class Rectangle(Base):
                 print('#', end='')
             print()
 
-    def __str__(self):
-        '''
-        String representation
-        '''
-        return '[Rectangle] ({}) {}/{} - {}/{} '.format(self.id,
-                                                        self.x, self.y, self.width, self.height)
-
     def update(self, *args, **kwargs):
         '''
         Allows for variadic args
         '''
         argc = len(args)
-        if args:
+        if argc > 0:
             try:
                 self.id = args[0]
                 self.width = args[1]
@@ -145,3 +138,22 @@ class Rectangle(Base):
                 self.x = kwargs['x']
             if 'y' in kwargs:
                 self.y = kwargs['y']
+
+    def to_dictionary(self):
+        '''
+       Pull the parameters out in
+       the function as a dictionary
+        '''
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width}
+
+    def __str__(self):
+        '''
+        String representation
+        '''
+        return '[Rectangle] ({}) {}/{} - {}/{} '.format(self.id,
+                                                        self.x, self.y, self.width, self.height)
