@@ -105,33 +105,43 @@ class Rectangle(Base):
         console with #
         '''
         for col in range(self.x):
-                print()
+            print()
         for y_axis in range(self.height):
             for x_axis in range(self.y):
-                 print(' ' , end='')
+                print(' ', end='')
             for row in range(self.width):
                 print('#', end='')
             print()
-        
 
     def __str__(self):
         '''
         String representation
         '''
-        return '[Rectangle] ({}) {}/{} - {}/{} '.format(self.id, self.x, self.y, self.width, self.height)
-        
+        return '[Rectangle] ({}) {}/{} - {}/{} '.format(self.id,
+                                                        self.x, self.y, self.width, self.height)
+
     def update(self, *args, **kwargs):
         '''
         Allows for variadic args
         '''
         argc = len(args)
-        try:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
-        except IndexError:
-            pass
-        
-            
+        if args:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
+        attribute_list = ['id', 'width', 'height', 'x', 'y']
+        if attribute_list[0] in kwargs:
+            self.id = kwargs['id']
+        if attribute_list[1] in kwargs:
+            self.width = kwargs['width']
+        if attribute_list[2] in kwargs:
+            self.height = kwargs['height']
+        if attribute_list[3] in kwargs:
+            self.x = kwargs['x']
+        if attribute_list[4] in kwargs:
+            self.y = kwargs['y']
