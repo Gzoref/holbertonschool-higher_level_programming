@@ -125,7 +125,7 @@ class Rectangle(Base):
         Allows for variadic args
         '''
         argc = len(args)
-        if argc > 0:
+        if args:
             try:
                 self.id = args[0]
                 self.width = args[1]
