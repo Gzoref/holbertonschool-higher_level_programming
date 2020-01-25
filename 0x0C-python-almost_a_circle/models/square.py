@@ -23,7 +23,7 @@ class Square(Rectangle):
         size getter
         '''
         return self.width
-    
+
     @size.setter
     def size(self, value):
         '''
@@ -31,7 +31,7 @@ class Square(Rectangle):
         '''
         self.width = value
         self.height = value
-        
+
     def update(self, *args, **kwargs):
         '''
         Makes args variadic
@@ -54,10 +54,22 @@ class Square(Rectangle):
                 self.x = kwargs['x']
             if 'y' in kwargs:
                 self.y = kwargs['y']
-                
+
+    def to_dictionary(self):
+        '''
+       Pull the parameters out in
+       the function as a dictionary
+        '''
+        return {
+            'id': self.id,
+            'x': self.x,
+            'size': self.size,
+            'y': self.y
+            }
+
     def __str__(self):
         '''
         String representation
         '''
-        return '[Rectangle] ({}) {}/{} - {} '.format(self.id,
-                                                        self.x, self.y, self.width)
+        return '[Square] ({}) {}/{} - {} '.format(self.id,
+                                                     self.x, self.y, self.size)
