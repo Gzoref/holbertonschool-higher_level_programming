@@ -134,14 +134,14 @@ class Rectangle(Base):
                 self.y = args[4]
             except IndexError:
                 pass
-        attribute_list = ['id', 'width', 'height', 'x', 'y']
-        if attribute_list[0] in kwargs:
-            self.id = kwargs['id']
-        if attribute_list[1] in kwargs:
-            self.width = kwargs['width']
-        if attribute_list[2] in kwargs:
-            self.height = kwargs['height']
-        if attribute_list[3] in kwargs:
-            self.x = kwargs['x']
-        if attribute_list[4] in kwargs:
-            self.y = kwargs['y']
+        else:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'width' in kwargs:
+                self.width = kwargs['width']
+            if 'height' in kwargs:
+                self.height = kwargs['height']
+            if 'x' in kwargs:
+                self.x = kwargs['x']
+            if 'y' in kwargs:
+                self.y = kwargs['y']
