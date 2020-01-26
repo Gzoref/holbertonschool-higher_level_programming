@@ -57,3 +57,29 @@ class Base:
 
         with open('{}'.format(cls.__name__), 'w', encoding='utf-8') as file:
             file.write(cls.to_json_string(listToDictionary))
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''
+        Returns instance with
+        all attributes set
+        '''
+        newInstance = cls(1, 1)
+        newInstance.update(**dictionary)
+        return newInstance
+
+    @classmethod
+    def load_from_file(cls):
+        '''
+        Returns a list
+        of instances
+        '''
+        insanceList = []
+        try:
+            with open('{}'.format(cls.__name__), 'r', encoding='utf-8') as f:
+                objectList = cls.from_json_string(f.read())
+        except IOError:
+            return []
+        for dictionary in objectList:
+            insanceList.append(cls.create(**dictionary))
+        return insanceList
