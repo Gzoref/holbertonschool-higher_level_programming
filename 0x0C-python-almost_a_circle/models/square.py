@@ -55,6 +55,9 @@ class Square(Rectangle):
             if 'y' in kwargs:
                 self.y = kwargs['y']
 
+    
+        
+        
     def to_dictionary(self):
         '''
        Pull the parameters out in
@@ -65,11 +68,13 @@ class Square(Rectangle):
             'x': self.x,
             'size': self.size,
             'y': self.y
-            }
+        }
+        
+        
 
     def __str__(self):
         '''
         String representation
         '''
         return '[Square] ({}) {}/{} - {} '.format(self.id,
-                                                     self.x, self.y, self.size)
+                                                  self.x, self.y, self.size)
