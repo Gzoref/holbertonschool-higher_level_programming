@@ -72,5 +72,5 @@ class Square(Rectangle):
         '''
         String representation
         '''
-        return '[Square] ({}) {}/{} - {} '.format(self.id,
+        return '[Square] ({}) {}/{} - {}'.format(self.id,
                                                   self.x, self.y, self.size)
