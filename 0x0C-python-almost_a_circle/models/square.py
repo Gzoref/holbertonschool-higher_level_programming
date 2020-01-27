@@ -44,7 +44,7 @@ class Square(Rectangle):
                 self.size = args[1]
                 self.x = args[3]
                 self.y = args[4]
-            except IndexError:
+            except:
                 pass
         else:
             if 'id' in kwargs:
