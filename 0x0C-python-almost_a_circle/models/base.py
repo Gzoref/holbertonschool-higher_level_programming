@@ -24,6 +24,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         '''
         Turn dictionary representation
@@ -34,6 +35,7 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
+    @staticmethod
     def from_json_string(json_string):
         '''
         Returns list of
