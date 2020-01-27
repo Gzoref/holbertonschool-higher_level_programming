@@ -47,8 +47,14 @@ class TestBaseClass(unittest.TestCase):
         obj = Base(None)
         self.assertEqual(obj.id, 1)
     
-    
+    def test_no_increment(self):
+        b1 = Base()
+        b2 = Base()
+        b3 = Base(12)
+        b4 = Base()
+        b5 = Base()
+        self.assertEqual(b5.id, 4)
 
-    if __name__ == '__main__':
-         unittest.main()
-        
+    def test_string(self):
+        b1 = Base("Hello")
+        self.assertEqual(b1.id, "Hello")       
