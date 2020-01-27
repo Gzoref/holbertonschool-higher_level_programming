@@ -40,8 +40,3 @@ class TestRectangleClass(unittest.TestCase):
         self.assertEqual(r1.id, 1)
         r2 = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual(r2.id, 12)
-    
-
-    
-    if __name__ == '__main__':
-        unittest.main()
