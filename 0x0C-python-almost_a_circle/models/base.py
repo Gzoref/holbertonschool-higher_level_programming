@@ -4,6 +4,7 @@ Create a folder named models with an empty file __init__.py
 inside - with this file, the folder will become a Python module
 '''
 import json
+import csv
 
 
 class Base:
@@ -49,14 +50,14 @@ class Base:
         Saves JSON of dictionary
         to a file <Class name>.json
         '''
-        listToDictionary = []
+        listdict = []
         if not list_objs:
             list_objs = []
         for items in list_objs:
-            listToDictionary.append(items.to_dictionary())
+            listdict.append(items.to_dictionary())
 
-        with open('{}'.format(cls.__name__), 'w', encoding='utf-8') as file:
-            file.write(cls.to_json_string(listToDictionary))
+        with open('{}.json'.format(cls.__name__), 'w', encoding='utf-8') as f:
+            f.write(cls.to_json_string(listdict))
 
     @classmethod
     def create(cls, **dictionary):
@@ -70,6 +71,37 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        '''
+        Returns a list
+        of instances
+        '''
+        insanceList = []
+        try:
+            with open('{}'.format(cls.__name__), 'r', encoding='utf-8') as f:
+                objectList = cls.from_json_string(f.read())
+        except IOError:
+            return []
+        for dictionary in objectList:
+            insanceList.append(cls.create(**dictionary))
+        return insanceList
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        '''
+        Wrte to csv
+        '''
+        listToDictionary = []
+        if list_objs is not None:
+            list_objs = []
+        for items in list_objs:
+            listToDictionary.append(items.to_dictionary())
+
+        with open('{}.csv'.format(cls.__name__), 'w', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerows(list_objs)
+
+    @classmethod
+    def load_from_file_csv(cls):
         '''
         Returns a list
         of instances
