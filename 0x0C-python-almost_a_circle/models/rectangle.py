@@ -104,10 +104,10 @@ class Rectangle(Base):
         Prints Rectangle to
         console with #
         '''
-        for col in range(self.x):
+        for col in range(self.y):
             print()
         for y_axis in range(self.height):
-            for x_axis in range(self.y):
+            for x_axis in range(self.x):
                 print(' ', end='')
             for row in range(self.width):
                 print('#', end='')
