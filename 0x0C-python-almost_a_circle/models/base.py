@@ -40,9 +40,8 @@ class Base:
         dictionaries from JSON
         '''
         if json_string is None:
-            return []
-        else:
-            return json.loads(json_string)
+            return []   
+        return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
