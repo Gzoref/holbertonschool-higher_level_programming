@@ -40,7 +40,7 @@ class Base:
         dictionaries from JSON
         '''
         if json_string is None:
-            return '[]'
+            return "[]"
         return json.loads(json_string)
 
     @classmethod
