@@ -30,7 +30,7 @@ class Base:
         Turn dictionary representation
         into JSON
         '''
-        if list_dictionaries is None and len(list_dictionaries) is 0:
+        if list_dictionaries is None:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
