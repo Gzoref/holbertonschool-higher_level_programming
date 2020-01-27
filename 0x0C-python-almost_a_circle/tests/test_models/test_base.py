@@ -9,7 +9,7 @@ class TestBaseClass(unittest.TestCase):
     
     @classmethod
     def setUp(self):
-       Base.base_instance = 0
+       Base._Base__nb_objects = 0
        pass
             
     @classmethod
@@ -20,7 +20,7 @@ class TestBaseClass(unittest.TestCase):
         '''
         Is nb_object private
         '''
-        self.assertTrue(hasattr(Base, 'base_instance'), 0)
+        self.assertTrue(hasattr(Base, '_Base__nb_objects'), 0)
 
     def test_pep8(self):
         pep8_style = pep8.StyleGuide(quit=True)
@@ -29,7 +29,7 @@ class TestBaseClass(unittest.TestCase):
 
     def test_docstring(self):
         self.assertIsNotNone(Base.__doc__)
-    
+
     def test_object_id(self):
         '''
         Does id accept params
@@ -43,9 +43,12 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(base_instance_3.id, 2)
         self.assertEqual(base_instance_4.id, 3)
 
-    def
-
+    def test_is_none(self):
+        obj = Base(None)
+        self.assertEqual(obj.id, 1)
+    
+    
 
     if __name__ == '__main__':
-        unittest.main()
+         unittest.main()
         
