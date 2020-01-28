@@ -40,12 +40,6 @@ class TestBaseClass(unittest.TestCase):
     def test_docstring(self):
         self.assertIsNotNone(Base.__doc__)
 
-        '''
-        =========================
-        __init__ and id tests
-        =========================
-        '''
-
     def test_object_id(self):
         '''
         Does id accept params
@@ -113,3 +107,7 @@ class TestBaseClass(unittest.TestCase):
         Square.save_to_file([])
         with open('Square.json') as f:
             self.assertEqual(f.read(), '[]')
+
+
+if __name__ == '__main__':
+    unittest.main()
