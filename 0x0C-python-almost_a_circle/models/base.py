@@ -83,15 +83,15 @@ class Base:
         Returns a list
         of instances
         '''
-        insanceList = []
+        instanceList = []
         try:
-            with open('{}'.format(cls.__name__), 'r', encoding='utf-8') as f:
+            with open('{}.json'.format(cls.__name__), 'r', encoding='utf-8') as f:
                 objectList = cls.from_json_string(f.read())
         except IOError:
             return []
         for dictionary in objectList:
-            insanceList.append(cls.create(**dictionary))
-        return insanceList
+            instanceList.append(cls.create(**dictionary))
+        return instanceList
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
@@ -114,12 +114,12 @@ class Base:
         Returns a list
         of instances
         '''
-        insanceList = []
+        instanceList = []
         try:
             with open('{}'.format(cls.__name__), 'r', encoding='utf-8') as f:
                 objectList = cls.from_json_string(f.read())
         except IOError:
             return []
         for dictionary in objectList:
-            insanceList.append(cls.create(**dictionary))
-        return insanceList
+            instanceList.append(cls.create(**dictionary))
+        return instanceList
