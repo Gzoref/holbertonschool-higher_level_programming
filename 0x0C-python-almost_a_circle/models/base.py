@@ -3,6 +3,7 @@
 Create a folder named models with an empty file __init__.py
 inside - with this file, the folder will become a Python module
 '''
+
 import json
 import csv
 
@@ -65,9 +66,17 @@ class Base:
         Returns instance with
         all attributes set
         '''
-        newInstance = cls(1, 1)
-        newInstance.update(**dictionary)
-        return newInstance
+        if cls.__name__ is 'Rectangle':
+            newInstance = cls(1, 1)
+            newInstance.update(**dictionary)
+            return newInstance
+        if cls.__name__ is 'Square':
+            newInstance = cls(1)
+            newInstance.update(**dictionary)
+            return newInstance
+        else:
+            return None
+        
 
     @classmethod
     def load_from_file(cls):
