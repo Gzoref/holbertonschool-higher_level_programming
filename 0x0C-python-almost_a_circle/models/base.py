@@ -85,7 +85,8 @@ class Base:
         '''
         instanceList = []
         try:
-            with open('{}.json'.format(cls.__name__), 'r', encoding='utf-8') as f:
+            with open('{}.json'.format(cls.__name__), 'r',
+                      encoding='utf-8') as f:
                 objectList = cls.from_json_string(f.read())
         except IOError:
             return []
