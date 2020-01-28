@@ -76,7 +76,6 @@ class Base:
             return newInstance
         else:
             return None
-        
 
     @classmethod
     def load_from_file(cls):
