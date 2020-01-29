@@ -30,6 +30,16 @@ class TestSquareClass(unittest.TestCase):
         '''Tests if Rectangle inherits Base.'''
         self.assertTrue(issubclass(Square, Base))
 
+    def test_values(self):
+        sqr1 = Square(3)
+        self.assertEqual(sqr1.size, 3)
+
+    def test_str(self):
+        sqr1 = Square(3)
+        sqr2 = Square(4, 5, 6)
+        self.assertEqual(sqr1.__str__(), '[Square] (3) 0/0 - 3')
+        self.assertEqual(sqr2.__str__(), '[Square] (4) 5/6 - 4')
+
     def test_area(self):
         r1 = Rectangle(3, 4)
         self.assertEqual(r1.area(), 12)

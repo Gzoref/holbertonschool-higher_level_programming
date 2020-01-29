@@ -80,3 +80,8 @@ class TestRectangleClass(unittest.TestCase):
         Rectangle.save_to_file([r1, r2])
         load_file = Rectangle.load_from_file()
         self.assertTrue(isinstance(load_file, list))
+
+    def test_args(self):
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle()
+            self.rect1.area(1)

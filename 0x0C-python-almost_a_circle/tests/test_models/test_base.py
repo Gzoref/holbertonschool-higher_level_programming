@@ -119,3 +119,11 @@ class TestBaseClass(unittest.TestCase):
         jload = json.loads(json_string)
         self.assertEqual(jload, [dict1, dict2])
         self.assertTrue(isinstance(json_string, str))
+
+    def test_from_json_to_str(self):
+        json_test = '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]'
+        json_str = Base.from_json_string(json_test)
+        self.assertTrue(isinstance(json_str, list))
+
+    def test_from_json_to_str_2(self):
+        self.assertEqual(Base.from_json_string(None), [])
