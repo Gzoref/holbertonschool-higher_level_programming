@@ -9,8 +9,12 @@ import pep8
 class TestSquareClass(unittest.TestCase):
 
     @classmethod
-    def setUp(self):
-        pass
+    def setUp(cls):
+        Base._Base__nb_objects = 0
+        cls.sqr1 = Square(2, 4)
+        cls.sqr2 = Square(2, 4, 6)
+        cls.sqr3 = Square(2, 4, 6, 8)
+        cls.sqr4 = Square(2, 4, 8, 10)
 
     @classmethod
     def tearDownClass(self):
@@ -29,3 +33,20 @@ class TestSquareClass(unittest.TestCase):
     def test_area(self):
         r1 = Rectangle(3, 4)
         self.assertEqual(r1.area(), 12)
+
+    def test_save_to_file(self):
+        Square.save_to_file(None)
+        with open('Square.json', 'r') as f:
+            self.assertEqual('[]', f.read())
+
+    def test_save_load_file(self):
+        r1 = Square(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Square.save_to_file([r1, r2])
+        load_file = Square.load_from_file()
+        self.assertTrue(isinstance(load_file, list))
+
+    def test_to_dict(self):
+        dict1 = self.sqr1.to_dictionary()
+        self.assertEqual({'id': 1, 'size': 2, 'x': 4, 'y': 0}, dict1)
+        self.assertTrue(isinstance(dict1, dict))

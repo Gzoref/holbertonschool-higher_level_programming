@@ -79,4 +79,4 @@ class TestRectangleClass(unittest.TestCase):
         r2 = Rectangle(2, 4)
         Rectangle.save_to_file([r1, r2])
         load_file = Rectangle.load_from_file()
-        self.assertTrue(type(load_file) is list)
+        self.assertTrue(isinstance(load_file, list))
