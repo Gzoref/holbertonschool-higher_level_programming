@@ -5,7 +5,7 @@ from models.square import Square
 import json
 import pep8
 
-class TestRectangleClass(unittest.TestCase):
+class TestSquareClass(unittest.TestCase):
 
     @classmethod
     def setUp(self):
