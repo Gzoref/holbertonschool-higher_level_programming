@@ -10,7 +10,7 @@ class TestRectangleClass(unittest.TestCase):
 
     @classmethod
     def setUp(self):
-        pass
+        Base._Base__nb_objects = 0
 
     @classmethod
     def tearDownClass(self):

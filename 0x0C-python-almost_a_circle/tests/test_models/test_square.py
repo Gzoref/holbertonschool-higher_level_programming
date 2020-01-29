@@ -5,23 +5,23 @@ from models.square import Square
 import json
 import pep8
 
+
 class TestSquareClass(unittest.TestCase):
 
     @classmethod
     def setUp(self):
-        pass            
-    
+        pass
+
     @classmethod
     def tearDownClass(self):
         pass
-    
+
     def test_class(self):
         '''
-        Rectangle is a class
+        Square is a class
         '''
         self.assertTrue(str(Square), "<class 'models.square.Square'>")
-        
-        
+
     def test_B_inheritance(self):
         '''Tests if Rectangle inherits Base.'''
         self.assertTrue(issubclass(Square, Base))
@@ -29,4 +29,3 @@ class TestSquareClass(unittest.TestCase):
     def test_area(self):
         r1 = Rectangle(3, 4)
         self.assertEqual(r1.area(), 12)
-        
