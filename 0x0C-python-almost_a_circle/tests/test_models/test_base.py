@@ -40,7 +40,11 @@ class TestBaseClass(unittest.TestCase):
     def test_docstring(self):
         self.assertIsNotNone(Base.__doc__)
 
-    def test_object_id(self):
+    def test_id_1(self):
+        base1 = Base()
+        self.assertEqual(base1.id, 1)
+
+    def test_id_2(self):
         '''
         Does id accept params
         '''
@@ -53,11 +57,11 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(base_instance_3.id, 2)
         self.assertEqual(base_instance_4.id, 3)
 
-    def test_is_none(self):
+    def test_id_3(self):
         obj = Base(None)
         self.assertEqual(obj.id, 1)
 
-    def test_no_increment(self):
+    def test_id_4(self):
         b1 = Base()
         b2 = Base()
         b3 = Base(12)
@@ -108,6 +112,10 @@ class TestBaseClass(unittest.TestCase):
         with open('Square.json') as f:
             self.assertEqual(f.read(), '[]')
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_to_json(self):
+        dict1 = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
+        dict2 = {'id': 89, 'x': 0, 'size': 4, 'y': 3}
+        json_string = Base.to_json_string([dict1, dict2])
+        jload = json.loads(json_string)
+        self.assertEqual(jload, [dict1, dict2])
+        self.assertTrue(isinstance(json_string, str))
