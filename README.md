@@ -1,4 +1,5 @@
-# Holberton School High-level Programming :computer:
+
+lberton School High-level Programming :computer:
 
 ---
 
