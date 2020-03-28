@@ -16,6 +16,7 @@ if __name__ == "__main__":
                                   pool_pre_ping=True))
 
     state_name = argv[4]
+    flag = 0
 
     Session = sessionmaker(bind=engine)
     session = Session()
@@ -23,10 +24,8 @@ if __name__ == "__main__":
     for state in session.query(State).order_by(State.id):
         if state.name == state_name:
             print('{}'.format(state.id))
-            '''
-            Not sure why only exit() gets correct output!!!
-            '''
-            exit()
-            print('Not found')
+            flag = 1
+    if not flag:
+        print('Not found')
 
     session.close()
