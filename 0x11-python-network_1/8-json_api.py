@@ -8,9 +8,9 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    url = 'http://0.0.0.0:5000/search_use'
+    url = 'http://b413be80f23b.44.hbtn-cod.io:5000/search_user'
     arg_length = len(sys.argv)
-    if arg_length > 1:
+    if arg_length == 2:
         q = sys.argv[1]
     else:
         q = ""
@@ -20,6 +20,6 @@ if __name__ == "__main__":
         if not req:
             print('No result')
         else:
-            print('[{}] {}'.format(req.get('id'), req.get('name')))
+            print('[{}] {}'.format(req['id'], req['name']))
     except ValueError:
         print('Not a valid JSON')
