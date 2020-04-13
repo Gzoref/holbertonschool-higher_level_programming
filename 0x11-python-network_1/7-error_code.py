@@ -13,6 +13,3 @@ if __name__ == "__main__":
         print('Error code: {}'.format(stat_code))
     else:
         print('{}'.format(response.text))
-        
-        
-
