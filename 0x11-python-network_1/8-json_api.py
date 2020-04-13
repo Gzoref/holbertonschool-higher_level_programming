@@ -8,7 +8,7 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    url = 'http://b413be80f23b.44.hbtn-cod.io:5000'
+    url = 'http://0.0.0.0:5000/search_user'
     arg_length = len(sys.argv[1])
     if arg_length > 1:
         q = argv[1]
@@ -16,7 +16,7 @@ if __name__ == "__main__":
         q = ""
     r = requests.post(url, data={'q': q})
     try:
-        req = r.json
+        req = r.json()
         if not req:
             print('No result')
         else:
