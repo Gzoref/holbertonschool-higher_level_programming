@@ -9,6 +9,11 @@ request(url, function (err, response, body) {
     console.log(err);
   }
   for (const characterId of JSON.parse(body).characters) {
-    console.log(result.name);
+    request(characterId, function (err, response, body) {
+      if (err) {
+        console.log(err);
+      }
+      console.log(JSON.parse(body).name);
+    });
   }
 });
