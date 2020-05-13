@@ -3,19 +3,19 @@
 const request = require('request');
 const url = process.argv[2];
 
-request(url, function (err, response, body) {
-  if (err) {
-    console.log(err);
+request(url, function (error, response, body) {
+  if (error) {
+    console.log(error);
   }
-  const completedTask = {};
-  for (const todos of JSON.parse(body)) {
-    if (todos.completedTask) {
-      if (completedTask[todos.userId]) {
-        completedTask[todos.userId]++;
+  const completed = {};
+  for (const task of JSON.parse(body)) {
+    if (task.completed === true) {
+      if (completed[task.userId]) {
+        completed[task.userId]++;
       } else {
-        completedTask[todos.userId] = 1;
+        completed[task.userId] = 1;
       }
     }
   }
-  console.log(completedTask);
+  console.log(completed);
 });
