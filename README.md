@@ -36,9 +36,7 @@
 
 ### [0x10. python-network_0](./0x10-python-network_0)
 
-### [0x11. python-network_1](./0x10-python-network_1)
-
-### [0x12 javascript-warm_up](./0x12-javascript-warm_up)
+### [0x11. python-network_1](./0x11-python-network_1)
 
 ### [0x12 javascript-warm_up](./0x12-javascript-warm_up)
 
