@@ -1,6 +1,18 @@
 # 0x01. Python - if/else, loops, functions
 
-## Description
+## Resources:books:
+Read or watch:
+* [More Control Flow Tools](https://intranet.hbtn.io/rltoken/R7uTXYVOjUilq6rCjsQcFg)
+* [Myths about Indentation](https://intranet.hbtn.io/rltoken/Y-HaMMJBKPseiVDo_v9PVg)
+* [IndentationError](https://intranet.hbtn.io/rltoken/AorC2VSZ4yCOx-AbatvKLA)
+* [How To Use String Formatters in Python 3](https://intranet.hbtn.io/rltoken/arGQeiwUbFn3JOoYpw84yA)
+* [Learn to Program](https://intranet.hbtn.io/rltoken/mlo-dauC8pSM_NrO5VYobw)
+* [Learn to Program 2 : Looping](https://intranet.hbtn.io/rltoken/mlo-dauC8pSM_NrO5VYobw)
+* [PEP 8 – Style Guide for Python Code](https://intranet.hbtn.io/rltoken/mq1IFaMhqpk2IHE0dC6UuQ)
+* [Install and usage](https://intranet.hbtn.io/rltoken/nzvAoWKw6zCTiWUPdkbXWw)
+
+---
+## Learning Objectives:bulb:
 What you should learn from this project:
 
 * Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
@@ -92,4 +104,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Geoffrey Zoref** - [Gzoref](https://github.com/settings/profile)
+* **Geoffrey Zoref** - [Gzoref](https://github.com/Gzoref)
