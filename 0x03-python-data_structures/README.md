@@ -1,95 +1,91 @@
-# 0x01. Python - if/else, loops, functions
+# 0x03. Python - Data Structures: Lists, Tuples
 
-## Description
+## Resources:books:
+Read or watch:
+* [3.1.3. Lists](https://intranet.hbtn.io/rltoken/zIxzk5ChUX6KzhJIxJjf9Q)
+* [Data structures](https://intranet.hbtn.io/rltoken/ugotLwGPHgU1raKqco8TFg)
+* [Learn to Program 6 : Lists](https://intranet.hbtn.io/rltoken/smot10KJXMP-a84UxJ7WrQ)
+
+---
+## Learning Objectives:bulb:
 What you should learn from this project:
 
 * Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
-* Why indentation is so important in Python
-* How to use the if, if ... else statements
-* How to use comments
-* How to affect values to variables
-* How to use the while and for loops
-* How is Python’s for different from C‘s?
-* How to use the break and continues statements
-* How to use else clauses on loops
-* What does the pass statement do, and when to use it
-* How to use range
-* What is a function and how do you use functions
-* What does return a function that does not use any return statement
-* Scope of variables
-* What’s a traceback
-* What are the arithmetic operators and how to use them
+* What are lists and how to use them
+* What are the differences and similarities between strings and lists
+* What are the most common methods of lists and how to use them
+* How to use lists as stacks and queues
+* What are list comprehensions and how to use them
+* What are tuples and how to use them
+* When to use tuples versus lists
+* What is a sequence
+* What is tuple packing
+* What is sequence unpacking
+* What is the del statement and how to use it
 
 ---
 
-### [0. Positive anything is better than negative nothing](./0-positive_or_negative.py)
-* This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.
+### [0. Print a list of integers](./0-print_list_integer.py)
+* Write a function that prints all integers of a list.
 
 
-### [1. The last digit](./1-last_digit.py)
-* This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable number.
+### [1. Secure access to an element in a list](./1-element_at.py)
+* Write a function that retrieves an element from a list like in C.
 
 
-### [2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game](./2-print_alphabet.py)
-* Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+### [2. Replace element](./2-replace_in_list.py)
+* Write a function that replaces an element of a list at a specific position (like in C).
 
 
-### [3. When I was having that alphabet soup, I never thought that it would pay off](./3-print_alphabt.py)
-* Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+### [3. Print a list of integers... in reverse!](./3-print_reversed_list_integer.py)
+* Write a function that prints all integers of a list, in reverse order.
 
 
-### [4. Hexadecimal printing](./4-print_hexa.py)
-* Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)
+### [4. Replace in a copy](./4-new_in_list.py)
+* Write a function that replaces an element in a list at a specific position without modifying the original list (like in C).
 
 
-### [5. 00...99](./5-print_comb2.py)
-* Write a program that prints numbers from 0 to 99.
+### [5. Can you C me now?](./5-no_c.py)
+* Write a function that removes all characters c and C from a string.
 
 
-### [6. Inventing is a combination of brains and materials. The more brains you use, the less material you need](./6-print_comb3.py)
-* Write a program that prints all possible different combinations of two digits.
+### [6. Lists of lists = Matrix](./6-print_matrix_integer.py)
+* Write a function that prints a matrix of integers.
 
 
-### [7. islower](./7-islower.py)
-* Write a function that checks for lowercase character. 
+### [7. Tuples addition](./7-add_tuple.py)
+* Write a function that adds 2 tuples.
 
 
-### [8. To uppercase](./8-uppercase.py)
-* Write a function that prints a string in uppercase followed by a new line.
+### [8. More returns!](./8-multiple_returns.py)
+* Write a function that returns a tuple with the length of a string and its first character.
 
 
-### [9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important](./9-print_last_digit.py)
-* Write a function that prints the last digit of a number.
+### [9. Find the max](./9-max_integer.py)
+* Write a function that finds the biggest integer of a list. 
 
 
-### [10. a + b](./10-add.py)
-* Write a function that adds two integers and returns the result.
+### [10. Only by 2](./10-divisible_by_2.py)
+* Write a function that finds all multiples of 2 in a list.
 
 
-### [11. a ^ b](./11-pow.py)
-* Write a function that computes a to the power of b and return the value.
+### [11. Delete at](./11-delete_at.py)
+* Write a function that deletes the item at a specific position in a list.
 
 
-### [12. Fizz Buzz](./12-fizzbuzz.py)
-* Write a function that prints the numbers from 1 to 100 separated by a space. 
+### [12. Switch](./12-switch.py)
+* Complete the source code in order to switch value of a and b
 
 
-### [13. Insert in sorted linked list](./13-insert_number.c)
+### [13. Linked list palindrome](./13-is_palindrome.c)
 * Technical interview preparation: 
 
 
-### [14. Smile in the mirror](./100-print_tebahpla.py)
-* Write a program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line.
-
-
-### [15. Remove at position](./101-remove_char_at.py)
-* Write a function that creates a copy of the string, removing the character at the position n (not the Python way, the “C array index”).
-
-
-### [16. ByteCode -> Python #2](./102-magic_calculation.py)
-* Write the Python function def magic_calculation(a, b, c): that does exactly the same as the following Python bytecode:
+### [14. CPython #0: Python lists](./100-print_python_list_info.c)
+* CPython is the reference implementation of the Python programming language. Written in C, CPython is the default and most widely used implementation of the language.
+Since we now know a bit of C, we can look at what is happening under the hood of Python. Let’s have fun with Python and C, and let’s look at what makes Python so easy to use.
 
 ---
 
 ## Author
-* **Geoffrey Zoref** - [Gzoref](https://github.com/settings/profile)
+* **Geoffrey Zoref** - [Gzoref](https://github.com/Gzoref)
